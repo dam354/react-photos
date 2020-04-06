@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { BrowserRouter as Router } from 'react-router-dom';
+import { PicContextProvider } from './PicContext';
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <PicContextProvider>
+    <Router>
+      <App />
+    </Router>
+  </PicContextProvider>,
   document.getElementById('root')
 );
 
